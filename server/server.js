@@ -32,7 +32,6 @@ app.get("/", (req, res) => {
 
 // middlwares
 import { errorMiddleware } from "./middlewares/error.middlware.js";
-import { useActionState } from "react";
 app.use(errorMiddleware);
 
 server.listen(PORT, () => {
