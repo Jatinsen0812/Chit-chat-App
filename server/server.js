@@ -22,9 +22,17 @@ import userRoute from "./routes/user.route.js";
 import messageRoute from "./routes/message.route.js";
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/message", messageRoute);
+// check server on vercel
+app.get("/", (req, res) => {
+  res.send({
+    activeStatus: true,
+    error: false 
+  })
+})
 
 // middlwares
 import { errorMiddleware } from "./middlewares/error.middlware.js";
+import { useActionState } from "react";
 app.use(errorMiddleware);
 
 server.listen(PORT, () => {
