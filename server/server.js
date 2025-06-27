@@ -8,7 +8,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://full-stack-chit-chat.netlify.app"],
+    origin: [process.env.CLIENT_URL],
     credentials: true,
   })
 );
