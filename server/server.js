@@ -8,7 +8,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://chit-chat-app-frontend-ewsa.onrender.com"],
     credentials: true,
   })
 );
